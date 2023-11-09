@@ -45,7 +45,7 @@ double Nut (double a,double b,double e,double N)//метод Ньтона
         if (n>N){ printf("Превышено число итераций \n");
             return NAN;}
     }
-    while ((abs(f(x0)/df(x0)) >= e));
+    while (abs(f(x0)) >= e*df(x0-d2f*e));
     printf("Метод Ньютона \nотв: %20.15f итераций: %i точное значение: %16.15f \n",x0,n,f(x0));
     return x0;
 }
